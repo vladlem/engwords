@@ -9,26 +9,10 @@ head
 
   title Bootstrap 101 Template
 
-body
-  .navbar.navbar-default.navbar-fixed-top
-    .container
-      .navbar-header
-        button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-menu"
-          span class="sr-only" "Menu"
-          span class="icon-bar"
-          span class="icon-bar"
-          span class="icon-bar"
-        a class="navbar-brand brand" href="#" ENGWORDS
-      .collapse.navbar-collapse id="main-menu"
-        ul class="nav navbar-nav"
-          li
-            a href="#" Demo
-          li
-            = link_to 'Sing In', new_session_path(resource_name)
-          li
-            = link_to 'Registration', new_registration_path(resource_name)
-
+  .container
+    .row
+      h3 Пожалуйста, ввидите любой текст на англиском языке и нажмите кнопку 'Submit'
 
   .container
     .row
-      = text_area :body, :rows => 5, :cols => 100
+      = text_area :body, :rows => 5, :cols => 500
