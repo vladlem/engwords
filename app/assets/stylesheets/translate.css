@@ -1,0 +1,10 @@
+.form-translate {
+    margin-top: 40px;
+    text-align: center;
+    color: cornflowerblue;
+}
+
+.form-translate input[type="submit"] {
+    max-width: 200px;
+    position: relative;
+}

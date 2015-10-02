@@ -1,0 +1,10 @@
+
+.container.form-translate
+  .row
+    h3 Пожалуйста, ввидите любой текст на англиском языке и нажмите кнопку 'Submit'
+
+  = form_tag('/analyse', method: :post) do
+    .row
+      = text_area :body, :rows => 5, :cols => 500
+
+    = submit_tag 'Analyse Text', class: 'btn btn-lg btn-primary btn-block'

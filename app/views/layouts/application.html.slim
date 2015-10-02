@@ -1,15 +1,18 @@
 doctype html
+
 html
   head
-    title Engwords
-    meta name="viewport" content="width=device-width, initial-scale=1.0"
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = stylesheet_link_tag    'signin', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
-    = javascript_include_tag :defaults
-    = csrf_meta_tags
 
-  body
+    meta charset="utf-8"
+    meta http-equiv="X-UA-Compatible" content="IE=edge"
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+
+    title Engwords
+
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = stylesheet_link_tag 'signin', media: 'all', 'data-turbolinks-track' => true
+    = stylesheet_link_tag 'translate', media: 'all', 'data-turbolinks-track' => true
+    = csrf_meta_tags
 
     body
       .navbar.navbar-default.navbar-fixed-top
@@ -20,12 +23,13 @@ html
               span class="icon-bar"
               span class="icon-bar"
               span class="icon-bar"
-            a class="navbar-brand brand" href="#" ENGWORDS
+            .navbar-brand.brand
+              = link_to 'ENGWORDS', '/application/index'
           .collapse.navbar-collapse id="main-menu"
             - unless user_signed_in?
               ul class="nav navbar-nav"
                 li
-                  = link_to 'Demo', 'application/index'
+                  = link_to 'Demo', '/translate/index'
                 li
                   = link_to 'Sing In', new_session_path(resource_name)
                 li
@@ -33,7 +37,7 @@ html
             - else
               ul class="nav navbar-nav"
                 li
-                  = link_to 'Translate', 'application/index'
+                  = link_to 'Translate', '/translate/index'
                 li
                   a href="#" #{current_user.email}
                 li
