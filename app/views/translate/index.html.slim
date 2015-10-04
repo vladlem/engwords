@@ -1,10 +1,14 @@
 
 .container.form-translate
   .row
-    h3 Пожалуйста, ввидите любой текст на англиском языке и нажмите кнопку 'Submit'
+    h3 Пожалуйста, ввидите любой текст на английском языке и нажмите кнопку 'Поиск Слов'
 
-  = form_tag('/analyse', method: :post) do
+  br
+
+  = form_tag('find_new_words', method: :post) do
     .row
-      = text_area :body, :rows => 5, :cols => 500
+      = text_area_tag :body, 'Please enter text...'
 
-    = submit_tag 'Analyse Text', class: 'btn btn-lg btn-primary btn-block'
+    br
+
+    = submit_tag 'Поиск Слов', class: 'btn btn-lg btn-primary btn-block'

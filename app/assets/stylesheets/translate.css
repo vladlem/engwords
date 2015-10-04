@@ -3,8 +3,12 @@
     text-align: center;
     color: cornflowerblue;
 }
-
+.form-translate textarea {
+    min-height: 200px;
+    width: 80%;
+    resize: none;
+}
 .form-translate input[type="submit"] {
     max-width: 200px;
-    position: relative;
+    margin-left: 40%;
 }

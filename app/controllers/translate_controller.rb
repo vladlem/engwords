@@ -5,7 +5,8 @@ class TranslateController < ApplicationController
     @user = current_user
   end
 
-  def analyse
+  def find_new_words
+    return render :index if params[:body]
 
   end
 
